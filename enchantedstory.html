@@ -7,26 +7,29 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
         <script src="js/script.js"></script>
-        <script src="js/storymodal.js"></script>
     </head>
     <body>
         <!-- Header for Navbar -->
         <div w3-include-HTML="header.html"></div>
         <div class="container-fluid">
-
-            <!-- Hero section image -->
+            <!-- Hero section inner image -->
             <div class="how-section1">
                 <div class="row">
                     <div class="col-md-6 how-img">
-                        <img src="images/enchantedimginner.png" class="img-fluid" alt=""/>
+                        <img src="images/enchantedimginner.png" class="img-fluid" alt="Enchanted Forest"/>
                     </div>
-                    <div class="col-md-6">
-                        <h2>The Enchanted Forest Adventure</h2>
-                                    <h4 class="subheading">GetLance is a great place to find more clients, and to run and grow your own freelance business.</h4>
-                    <p class="text-muted">Freedom to work on ideal projects. On GetLance, you run your own business and choose your own clients and projects. Just complete your profile and we’ll highlight ideal jobs. Also search projects, and respond to client invitations.
-                                        Wide variety and high pay. Clients are now posting jobs in hundreds of skill categories, paying top price for great work.
-                                        More and more success. The greater the success you have on projects, the more likely you are to get hired by clients that use GetLance.</p>
+                    <div  id="story-container" class="col-md-6">
+                        <h1 class="display-2 fs-1">The Enchanted Forest Adventure</h1>
+                        <h4 class="subheading">Discover the magic, mystery, and friendship within the enchanted woods.</h4>
+                        <p id="story-text" class="text-justify"><strong> Enchanted Forest Adventure </strong> is a whimsical tale about a group of friends who embark on a magical journey through a mystical forest. 
+                        Along the way, they encounter enchanting creatures, solve ancient riddles, and uncover hidden secrets. With each step, they learn the value of friendship, bravery, and the power of believing in the impossible.
+                        A heartwarming story invites readers to explore a world where wonder and adventure await around every corner.</p>
+                        <div id="choices">
+                            <button onclick="makeChoice('enter')">Enter the forest</button>
+                            <button onclick="makeChoice('leave')">Leave the forest</button>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
 
@@ -73,111 +76,12 @@
                 </div>
             </div>
 
-            <!-- Story image and modal to move along -->
-            <h2>Stacked Bootstrap Modal Example.</h2>
-            <a data-toggle="modal" href="#myModal" class="btn btn-primary">Launch modal</a>
-        
-            <div class="modal fade" id="myModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title">Modal 1</h4>
-                </div>
-                <div class="container"></div>
-                <div class="modal-body">Content for the dialog / modal goes here.
-                    <br>
-                    <br>
-                    <br>
-                    <p>more content</p>
-                    <br>
-                    <br>
-                    <br> <a data-toggle="modal" href="#myModal2" class="btn btn-primary">Launch modal</a>
-        
-                </div>
-                <div class="modal-footer"> <a href="#" data-dismiss="modal" class="btn">Close</a>
-                    <a href="#" class="btn btn-primary">Save changes</a>
-        
-                </div>
-                </div>
-            </div>
-            </div>
-            <div class="modal fade rotate" id="myModal2">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title">Modal 2</h4>
-        
-                </div>
-                <div class="container"></div>
-                <div class="modal-body">Content for the dialog / modal goes here.
-                    <br>
-                    <br>
-                    <p>come content</p>
-                    <br>
-                    <br>
-                    <br> <a data-toggle="modal" href="#myModal3" class="btn btn-primary">Launch modal</a>
-        
-                </div>
-                <div class="modal-footer"> <a href="#" data-dismiss="modal" class="btn">Close</a>
-                    <a href="#" class="btn btn-primary">Save changes</a>
-        
-                </div>
-                </div>
-            </div>
-            </div>
-            <div class="modal fade" id="myModal3">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title">Modal 3</h4>
-        
-                </div>
-                <div class="container"></div>
-                <div class="modal-body">Content for the dialog / modal goes here.
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br> <a data-toggle="modal" href="#myModal4" class="btn btn-primary">Launch modal</a>
-        
-                </div>
-                <div class="modal-footer"> <a href="#" data-dismiss="modal" class="btn">Close</a>
-                    <a href="#" class="btn btn-primary">Save changes</a>
-        
-                </div>
-                </div>
-            </div>
-            </div>
-            <div class="modal fade" id="myModal4">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title">Modal 4</h4>
-        
-                </div>
-                <div class="container"></div>
-                <div class="modal-body">Content for the dialog / modal goes here.</div>
-                <div class="modal-footer"> <a href="#" data-dismiss="modal" class="btn">Close</a>
-                    <a href="#" class="btn btn-primary">Save changes</a>
-        
-                </div>
-                </div>
-            </div>
-            </div>
-       
-        </div>
-
-
-
         <!-- Footer Section -->
         <div w3-include-HTML="footer.html"></div>
         <script>
             includeHTML();
         </script>
+        <script src="js/story.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
