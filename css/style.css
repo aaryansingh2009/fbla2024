@@ -21,8 +21,7 @@ footer {
 .bgimage {
     width:100%;
     height:500px;
-    background: url("./images/heroimg.png");
-    background-repeat: no-repeat;
+    background: url("/images/heroimg.png") no-repeat;
     background-position: center;
     background-size:cover;
     background-attachment: fixed;
