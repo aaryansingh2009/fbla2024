@@ -2,26 +2,85 @@ function makeChoice(choice) {
     const storyText = document.getElementById('story-text');
     const choices = document.getElementById('choices');
 
-    if (choice === 'enter') {
-        storyText.textContent = 'As you step into the forest, the sound grows louder-a harmonious tune mixed with the rustling leaves. Sunlight filters through the canopy, creating a kaleidoscope of light on the forest floor. You spot a peculiar tree with a door carved into its trunk.';
+    // THE HIDDEN TIDE POOLS
+    if (choice === 'hiddenpools') {
+        storyText.textContent = 'You make your way to the rocky outcrop, where the tide pools are filled with vibrant starfish, sea anemones, and tiny fish darting about. As you lean in closer, you notice a glimmering object at the bottom of one pool. \n Suddenly, a friendly sea turtle swims by and pops its head above the water. "Hello there! If you help me find my lost shell, I can show you something special!" it says.';
         choices.innerHTML = `
-            <button onclick="makeChoice('investigate')">Investigate the sound</button>
-            <button onclick="makeChoice('explore')">Explore the tree</button>
-        `;
-    } else if (choice === 'investigate') {
-        storyText.textContent = 'You follow the enchanting melody to a clearing where a small, shimmering creature is trapped in a web of sparkling vines. It resembles a tiny fairy with iridescent wings, and it gazes at you with wide, pleading eyes.';
-        choices.innerHTML = '<button onclick="makeChoice("help")">Help the creature</button>'
-                            '<button onclick="makeChoice("run")">Run away</button>';
+            <button onclick="makeChoice('agree')">Agree to help the turtle find its shell</button>
+            <button onclick="makeChoice('ignore')">Ignore the turtle and investigate the glimmering object</button>`; // A1   A2
+   
+    // A1 Return Options
+    } else if (choice === 'agree') {
+        storyText.textContent = 'The turtle leads you to a series of pools, each more vibrant than the last. "I lost my shell near the colorful coral," it explains. As you search, you come across various underwater wonders, but the shell remains elusive.';
+        choices.innerHTML = `<button onclick="makeChoice('divedeeper')">Dive deeper into the pool to search for the shell</button>
+                            <button onclick="makeChoice('askturtle')">Ask the turtle if it remembers any specific clues about where it might be</button>`; // A1a  A2a
 
-    } else if (choice === 'explore') {
-        storyText.textContent = 'You push open the small door, and it creaks as it reveals a cozy room filled with strange potions, scrolls, and a glowing crystal ball. A wise old owl, perched on a shelf, looks at you curiously.';
-        choices.innerHTML = '<button onclick="makeChoice("Talkowl")">Talk to the Owl</button>'
-                            '<button onclick="makeChoice("examinepotions")">Examine the potions</button>';
-                            
-    } else if (choice === 'right') {
-        storyText.textContent = 'You follow the right path and encounter a wise old owl who offers you a magical riddle.';
+    // A2 Return Options                 
+    } else if (choice === 'ignore') {
+        storyText.textContent = 'You reach down into the tide pool and retrieve a beautiful, ornate seashell. As you hold it up to the light, it begins to shimmer with a magical glow. You feel a surge of energy, and suddenly you hear whispers of the ocean’s secrets.';
+        choices.innerHTML = `<button onclick="makeChoice('keep')">Keep the seashell and explore its powers</button>
+                            <button onclick="makeChoice('return')">Return the seashell to the turtle and ask for guidances</button>`; // A2a  A2b
+                
+    // A1a END
+    } else if (choice === 'divedeeper') {
+        storyText.textContent = 'You dive deep and finally find the turtle’s shell, earning the turtles gratitude and a glimpse into the magical world of the ocean, where you learn to communicate with sea creatures';
+        choices.innerHTML = '<button onclick="resetStory()">Restart</button>';
+
+    // A1b END    
+    } else if (choice === 'askturtle') {
+        storyText.textContent = 'You bond with the turtle, and it teaches you about the importance of teamwork and nature’s treasures.';
+        choices.innerHTML = '<button onclick="resetStory()">Restart</button>';
+
+    // A2a END    
+    }  else if (choice === 'keep') {
+        storyText.textContent = 'The seashell grants you the ability to hear the ocean whispers, leading you on new adventures as a protector of marine life.';
+        choices.innerHTML = '<button onclick="resetStory()">Restart</button>';
+
+    // A2b END    
+    }  else if (choice === 'return') {
+        storyText.textContent = 'The turtle rewards you with a magical map leading to an underwater treasure, and you embark on an exciting quest together.';
+        choices.innerHTML = '<button onclick="resetStory()">Restart</button>';
+
+    // ABANDONED SHIPWRECK    
+
+    }  else if (choice === 'abandoned') {
+        storyText.textContent = 'You make your way to the shipwreck, its tattered sails fluttering in the wind. The sight is both eerie and exhilarating. As you climb aboard, the smell of salt and old wood fills the air. \n Inside, you find remnants of treasure maps and dusty chests. Suddenly, a parrot flies down and lands on your shoulder. "Ahoy, matey! The treasure be here, but ye must prove yer worth first!" it squawks.';
+        choices.innerHTML = `<button onclick="makeChoice('askparrot')">Ask the parrot how to prove your worth</button>
+                            <button onclick="makeChoice('searchship')">Search the ship for treasure without the parrot's help</button>`; // B1  B2
+
+    // B1 Return Options                        
+    } else if (choice === 'askparrot') {
+        storyText.textContent = 'The parrot fluffs its feathers. "To find the treasure, ye must solve me riddle! Here it is: I can fly without wings. I can cry without eyes. Whenever I go, darkness flies. What am I?"';
+        choices.innerHTML = `<button onclick="makeChoice('cloud')">A Cloud</button>
+                            <button onclick="makeChoice('shadow')">A Shadow</button>`; // B1a  B1b
+
+    // B2 Return Options                        
+    } else if (choice === 'searchship') {
+    storyText.textContent = 'You rummage through the ships hold, finding dusty maps and some old gold coins. But just as you think you are alone, you hear the creaking of wood. You turn to find a ghostly figure-a pirate captain!';
+    choices.innerHTML = `<button onclick="makeChoice('demandcaptain')">Demand the captain tell you about the treasure</button>
+                        <button onclick="makeChoice('askcaptain')">Ask the captain about the ship's history</button>`; // B2a  B2b
+
+    // B1a End
+    } else if (choice === 'cloud') {
+    storyText.textContent = 'The parrot is impressed, and the ship reveals its hidden treasure, making you a local legend for uncovering pirate gold';
+    choices.innerHTML = '<button onclick="resetStory()">Restart</button>';
+
+    // B1b END    
+    } else if (choice === 'shadow') {
+        storyText.textContent = 'The parrot is not pleased with your answer, but it offers you another chance to prove your worth through another riddle, leading to more challenges';
+        choices.innerHTML = '<button onclick="resetStory()">Restart</button>';
+
+    // B2a END    
+    }  else if (choice === 'demandcaptain') {
+        storyText.textContent = 'You learn the importance of courage and leadership, and you inherit the captain’s spirit as you become a new guardian of the shipwreck.';
+        choices.innerHTML = '<button onclick="resetStory()">Restart</button>';
+
+    // B2b END    
+    }  else if (choice === 'askcaptain') {
+        storyText.textContent = 'You document the captains stories, becoming a renowned historian and storyteller of the seas.';
         choices.innerHTML = '<button onclick="resetStory()">Restart</button>';
     }
+
 }
 
 function resetStory() {
@@ -29,7 +88,12 @@ function resetStory() {
     const choices = document.getElementById('choices');
     storyText.textContent = 'Enchanted Forest Adventure is a whimsical tale about a group of friends who embark on a magical journey through a mystical forest. Along the way, they encounter enchanting creatures, solve ancient riddles, and uncover hidden secrets. With each step, they learn the value of friendship, bravery, and the power of believing in the impossible. A heartwarming story invites readers to explore a world where wonder and adventure await around every corner.';
     choices.innerHTML = `
-        <button onclick="makeChoice('enter')">Enter the forest</button>
-        <button onclick="makeChoice('leave')">Leave the forest</button>
+        <button onclick="makeChoice('hiddenpools')">The Hidden Tide Pools</button>
+        <button onclick="makeChoice('abandoned')">The Abandoned Shipwreck</button>
     `;
+}
+
+else if (choice === 'right') {
+    storyText.textContent = 'You follow the right path and encounter a wise old owl who offers you a magical riddle.';
+    choices.innerHTML = '<button onclick="resetStory()">Restart</button>';
 }
