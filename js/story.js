@@ -7,7 +7,7 @@ function makeChoice(choice) {
     if (choice === 'enter') {
         storyText.textContent = 'As you step into the forest, the sound grows louder-a harmonious tune mixed with the rustling leaves. Sunlight filters through the canopy, creating a kaleidoscope of light on the forest floor. You spot a peculiar tree with a door carved into its trunk.';
         choices.innerHTML = `<button onclick="makeChoice('investigate')">Investigate the sound</button>
-                            <button onclick="makeChoice("explore")">Explore the tree</button>`; //A1  A2
+                            <button onclick="makeChoice('explore')">Explore the tree</button>`; //A1  A2
     // A1 Options Return
     } else if (choice === 'investigate') {
         storyText.textContent = 'You follow the enchanting melody to a clearing where a small, shimmering creature is trapped in a web of sparkling vines. It resembles a tiny fairy with iridescent wings, and it gazes at you with wide, pleading eyes.';
@@ -69,7 +69,7 @@ function makeChoice(choice) {
 function resetStory() {
     const storyText = document.getElementById('story-text');
     const choices = document.getElementById('choices');
-    storyText.textContent = 'Enchanted Forest Adventure is a whimsical tale about a group of friends who embark on a magical journey through a mystical forest. Along the way, they encounter enchanting creatures, solve ancient riddles, and uncover hidden secrets. With each step, they learn the value of friendship, bravery, and the power of believing in the impossible. A heartwarming story invites readers to explore a world where wonder and adventure await around every corner.';
+    storyText.textContent = '<b>Enchanted Forest Adventures;</b> You find yourself at the edge of an enchanted forest. The tall, ancient trees are adorned with luminescent flowers, their petals glowing in shades of blue and purple. A gentle breeze carries the scent of jasmine and a faint humming sound, like a distant melody. You feel a mixture of fear and excitement coursing through your veins.';
     choices.innerHTML = `
         <button onclick="makeChoice('enter')">Enter the forest</button>
         <button onclick="makeChoice('leave')">Leave the forest</button>
