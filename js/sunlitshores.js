@@ -17,18 +17,18 @@ function makeChoice(choice) {
 
     // A2 Return Options                 
     } else if (choice === 'ignore') {
-        storyText.textContent = 'You reach down into the tide pool and retrieve a beautiful, ornate seashell. As you hold it up to the light, it begins to shimmer with a magical glow. You feel a surge of energy, and suddenly you hear whispers of the ocean’s secrets.';
+        storyText.textContent = 'You reach down into the tide pool and retrieve a beautiful, ornate seashell. As you hold it up to the light, it begins to shimmer with a magical glow. You feel a surge of energy, and suddenly you hear whispers of the oceans secrets.';
         choices.innerHTML = `<button onclick="makeChoice('keep')">Keep the seashell and explore its powers</button>
                             <button onclick="makeChoice('return')">Return the seashell to the turtle and ask for guidances</button>`; // A2a  A2b
                 
     // A1a END
     } else if (choice === 'divedeeper') {
-        storyText.textContent = 'You dive deep and finally find the turtle’s shell, earning the turtles gratitude and a glimpse into the magical world of the ocean, where you learn to communicate with sea creatures';
+        storyText.textContent = 'You dive deep and finally find the turtles shell, earning the turtles gratitude and a glimpse into the magical world of the ocean, where you learn to communicate with sea creatures';
         choices.innerHTML = '<button onclick="resetStory()">Restart</button>';
 
     // A1b END    
     } else if (choice === 'askturtle') {
-        storyText.textContent = 'You bond with the turtle, and it teaches you about the importance of teamwork and nature’s treasures.';
+        storyText.textContent = 'You bond with the turtle, and it teaches you about the importance of teamwork and natures treasures.';
         choices.innerHTML = '<button onclick="resetStory()">Restart</button>';
 
     // A2a END    
@@ -72,7 +72,7 @@ function makeChoice(choice) {
 
     // B2a END    
     }  else if (choice === 'demandcaptain') {
-        storyText.textContent = 'You learn the importance of courage and leadership, and you inherit the captain’s spirit as you become a new guardian of the shipwreck.';
+        storyText.textContent = 'You learn the importance of courage and leadership, and you inherit the captains spirit as you become a new guardian of the shipwreck.';
         choices.innerHTML = '<button onclick="resetStory()">Restart</button>';
 
     // B2b END    
@@ -86,14 +86,9 @@ function makeChoice(choice) {
 function resetStory() {
     const storyText = document.getElementById('story-text');
     const choices = document.getElementById('choices');
-    storyText.textContent = 'Enchanted Forest Adventure is a whimsical tale about a group of friends who embark on a magical journey through a mystical forest. Along the way, they encounter enchanting creatures, solve ancient riddles, and uncover hidden secrets. With each step, they learn the value of friendship, bravery, and the power of believing in the impossible. A heartwarming story invites readers to explore a world where wonder and adventure await around every corner.';
+    storyText.textContent = 'The Secrets of the Sunlit Shores; You find yourself on the sun-kissed sands of Sunlit Shores, a picturesque beach known for its crystal-clear waters and vibrant marine life. Palm trees sway gently in the breeze, and the salty air fills your lungs with invigorating energy. Locals whisper of hidden treasures and mystical sea creatures lurking beneath the waves. \n As you gaze out at the horizon, two intriguing options catch your eye:';
     choices.innerHTML = `
         <button onclick="makeChoice('hiddenpools')">The Hidden Tide Pools</button>
         <button onclick="makeChoice('abandoned')">The Abandoned Shipwreck</button>
     `;
-}
-
-else if (choice === 'right') {
-    storyText.textContent = 'You follow the right path and encounter a wise old owl who offers you a magical riddle.';
-    choices.innerHTML = '<button onclick="resetStory()">Restart</button>';
 }
