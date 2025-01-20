@@ -109,11 +109,6 @@ button:hover {
     background-color: #0056b3;
 }
 
-.fit-image {
-    width: 100%;
-    object-fit: cover;
-    }
-
 /* Responsive font sizes for display-2 */
 @media (max-width: 1200px) {
     .display-2 {
