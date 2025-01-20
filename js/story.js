@@ -66,28 +66,28 @@ function makeChoice(choice) {
 
     } else if (choice === 'turnbackhome') {
         storyText.textContent = 'As you walk away from the forest, you feel a sense of relief. However, you cant shake the feeling that you might have missed something wonderful. You get home and pour yourself a cup of tea, gazing out the window towards the woods.';
-        choices.innerHTML = `<button onclick="makeChoices('returntmmr')">Decide to return tomorrow</button>
-                            <button onclick="makeChoices('diffpathnear')">Take a different path nearby</button>`; // B1  B2
+        choices.innerHTML = `<button onclick="makeChoice('returntmmr')">Decide to return tomorrow</button>
+                            <button onclick="makeChoice('diffpathnear')">Take a different path nearby</button>`; // B1  B2
     
     // B1 Return Options                        
     } else if (choice === 'returntmmr') {
         storyText.textContent = 'You wake up early, filled with determination. You gather supplies-a journal, some food, and a small map. Today, you will discover the forests secrets.';
-        choices.innerHTML = `<button onclick="makeChoices('samepath')">Take the same path as before</button>
-                            <button onclick="makeChoices('diffpath')">Try a different path</button>`; // B1a  B1b
+        choices.innerHTML = `<button onclick="makeChoice('samepath')">Take the same path as before</button>
+                            <button onclick="makeChoice('diffpath')">Try a different path</button>`; // B1a  B1b
 
     // B2 Return Options
     } else if (choice === 'diffpathnear') {
         storyText.textContent = 'You wander down a different trail, lined with wildflowers and buzzing bees. Suddenly, you hear laughter and follow it, leading you to a small gathering of forest sprites dancing in a sunbeam.';
-        choices.innerHTML = `<button onclick="makeChoices('joindance')">Join the dance</button>
-                            <button onclick="makeChoices('watchedge')">Watch quietly from the edge</button>`; // B2a  B2b
+        choices.innerHTML = `<button onclick="makeChoice('joindance')">Join the dance</button>
+                            <button onclick="makeChoice('watchedge')">Watch quietly from the edge</button>`; // B2a  B2b
     
     // B1 END
-    }  else if (choice === 'samepath' || choices === 'diffpath') {
+    }  else if (choice === 'samepath' || choice === 'diffpath') {
         storyText.textContent = 'As you flee, the forest envelops you in a maze of illusions. You eventually find your way back, but you carry the lesson of bravery in your heart. The experience ignites your curiosity, leading you to return and face your fears with newfound courage.';
         choices.innerHTML = `<button onclick="resetStory()">Restart</button>`;
 
     // B2 END
-    }  else if (choice === 'joindance' || choices === 'watchedge') {
+    }  else if (choice === 'joindance' || choice === 'watchedge') {
         storyText.textContent = 'Following the new path leads you to a charming village where you form lasting friendships. The villagers share their own tales of the forest, inspiring you to become a storyteller. You spend your days weaving enchanting tales, keeping the spirit of adventure alive in the hearts of others.';
         choices.innerHTML = `<button onclick="resetStory()">Restart</button>`;
     }
