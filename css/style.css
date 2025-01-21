@@ -4,6 +4,7 @@
     font-size: 1.5rem;
 }
 
+/* Header Color */
 header {
     background: #4CAF50;
     color: #fff;
@@ -11,11 +12,13 @@ header {
     text-align: center;
 }
 
+/* Header Text with Padding */
 .headings {
     text-align: left;
     padding: 10px;
 }
 
+/* Footer background and text color  */
 footer {
     background: #4CAF50;
     color: white;
@@ -23,6 +26,7 @@ footer {
     padding: 15px 0;
 }
 
+/* Hero Img - Size and Format */
 .bgimage {
     width:100%;
     height:550px;
@@ -33,11 +37,14 @@ footer {
     background-attachment: fixed;
   }
 
+/* About us bg color with padding */
 .aboutus {
     padding: 20px;
     background-color: #bdaf95;
   }
 
+/* Display Stories */
+/* Overwriting the Bootstrap CSS */
 .how-section1{
     margin-top:-15%;
     padding-top: 10%;
@@ -94,6 +101,7 @@ footer {
     text-align: center;
 }
 
+/* Button Size and Color */
 button {
     margin: 5px;
     padding: 10px 20px;
@@ -105,6 +113,7 @@ button {
     color: white;
 }
 
+/* Button Hover turn orange */
 button:hover {
     background-color: orange;
 }
