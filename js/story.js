@@ -82,7 +82,8 @@ function makeChoice(choice) {
                             <button onclick="makeChoice('diffpath')">Try a different path</button>
                             <button onclick="resetStory()">STOP</button>`; // B1a  B1b
 
-    // B2 Return Options ') {
+    // B2 Return Options                        
+    } else if (choice === 'diffpathnear') {
         storyText.textContent = 'You wander down a different trail, lined with wildflowers and buzzing bees. Suddenly, you hear laughter and follow it, leading you to a small gathering of forest sprites dancing in a sunbeam.';
         choices.innerHTML = `<button onclick="makeChoice('joindance')">Join the dance</button>
                             <button onclick="makeChoice('watchedge')">Watch quietly from the edge</button>
