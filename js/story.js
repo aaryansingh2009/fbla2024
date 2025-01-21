@@ -89,7 +89,7 @@ function makeChoice(choice) {
     }  else if (choice === 'joindance' || choice === 'watchedge') {
         storyText.textContent = 'Following the new path leads you to a charming village where you form lasting friendships. The villagers share their own tales of the forest, inspiring you to become a storyteller. You spend your days weaving enchanting tales, keeping the spirit of adventure alive in the hearts of others.';
         choices.innerHTML = `<button onclick="resetStory()">Restart</button>`;
-    }
+    } 
 }
 function resetStory() {
     const storyText = document.getElementById('story-text');
