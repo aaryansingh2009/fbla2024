@@ -7,29 +7,34 @@ function makeChoice(choice) {
     if (choice === 'enter') {
         storyText.textContent = 'As you step into the forest, the sound grows louder-a harmonious tune mixed with the rustling leaves. Sunlight filters through the canopy, creating a kaleidoscope of light on the forest floor. You spot a peculiar tree with a door carved into its trunk.';
         choices.innerHTML = `<button onclick="makeChoice('investigate')">Investigate the sound</button>
-                            <button onclick="makeChoice('explore')">Explore the tree</button>`; //A1  A2
+                            <button onclick="makeChoice('explore')">Explore the tree</button>
+                            <button onclick="resetStory()">STOP</button>`; //A1  A2
     // A1 Options Return
     } else if (choice === 'investigate') {
         storyText.textContent = 'You follow the enchanting melody to a clearing where a small, shimmering creature is trapped in a web of sparkling vines. It resembles a tiny fairy with iridescent wings, and it gazes at you with wide, pleading eyes.';
         choices.innerHTML = `<button onclick="makeChoice('help')">Help the creature</button>
-                            <button onclick="makeChoice('run')">Run away</button>`; // A1a  A1b
+                            <button onclick="makeChoice('run')">Run away</button>
+                            <button onclick="resetStory()">STOP</button>`; // A1a  A1b
 
     // A2 Options Return                   
     } else if (choice === 'explore') {
         storyText.textContent = 'You push open the small door, and it creaks as it reveals a cozy room filled with strange potions, scrolls, and a glowing crystal ball. A wise old owl, perched on a shelf, looks at you curiously.';
         choices.innerHTML = `<button onclick="makeChoice('talkowl')">Talk to the Owl</button>
-                            <button onclick="makeChoice('examinepotions')">Examine the potions</button>`; // A2a  A2b
+                            <button onclick="makeChoice('examinepotions')">Examine the potions</button>
+                            <button onclick="resetStory()">STOP</button>`; // A2a  A2b
     // A1a Options Return                        
     } else if (choice === 'help') {
         storyText.textContent = 'The fairy, now free, flutters around you in delight. "Thank you, brave traveler! I am Lirael, guardian of this forest. As a reward, I will grant you a wish!"';
         choices.innerHTML = `<button onclick="makeChoice('wishsecrets')">Wish for knowledge of the forests secrets</button>
-                            <button onclick="makeChoice('wishanimals')">Wish for the ability to communicate with animals</button>`; // A1a1  A1a2
+                            <button onclick="makeChoice('wishanimals')">Wish for the ability to communicate with animals</button>
+                            <button onclick="resetStory()">STOP</button>`; // A1a1  A1a2
 
     // A1b Options Return                        
     } else if (choice === 'run') {
         storyText.textContent = 'You dash through the trees, your heart pounding. The sounds of the forest turn into a chaotic symphony. You stumble and fall, and when you look up, you see the fairy looking down at you, disappointment in her eyes.';
         choices.innerHTML = `<button onclick="makeChoice('apologize')">Apologize and explain your fear</button>
-                            <button onclick="makeChoice('keeprunning')">Keep running</button>`; // A1b1  A1b2
+                            <button onclick="makeChoice('keeprunning')">Keep running</button>
+                            <button onclick="resetStory()">STOP</button>`; // A1b1  A1b2
 
     // A2a Options Return END
     } else if (choice === 'talkowl') {
@@ -67,18 +72,21 @@ function makeChoice(choice) {
     } else if (choice === 'turnbackhome') {
         storyText.textContent = 'As you walk away from the forest, you feel a sense of relief. However, you cant shake the feeling that you might have missed something wonderful. You get home and pour yourself a cup of tea, gazing out the window towards the woods.';
         choices.innerHTML = `<button onclick="makeChoice('returntmmr')">Decide to return tomorrow</button>
-                            <button onclick="makeChoice('diffpathnear')">Take a different path nearby</button>`; // B1  B2
+                            <button onclick="makeChoice('diffpathnear')">Take a different path nearby</button>
+                            <button onclick="resetStory()">STOP</button>`; // B1  B2
     
     // B1 Return Options                        
     } else if (choice === 'returntmmr') {
         storyText.textContent = 'You wake up early, filled with determination. You gather supplies-a journal, some food, and a small map. Today, you will discover the forests secrets.';
         choices.innerHTML = `<button onclick="makeChoice('samepath')">Take the same path as before</button>
-                            <button onclick="makeChoice('diffpath')">Try a different path</button>`; // B1a  B1b
+                            <button onclick="makeChoice('diffpath')">Try a different path</button>
+                            <button onclick="resetStory()">STOP</button>`; // B1a  B1b
 
     // B2 Return Options ') {
         storyText.textContent = 'You wander down a different trail, lined with wildflowers and buzzing bees. Suddenly, you hear laughter and follow it, leading you to a small gathering of forest sprites dancing in a sunbeam.';
         choices.innerHTML = `<button onclick="makeChoice('joindance')">Join the dance</button>
-                            <button onclick="makeChoice('watchedge')">Watch quietly from the edge</button>`; // B2a  B2b
+                            <button onclick="makeChoice('watchedge')">Watch quietly from the edge</button>
+                            <button onclick="resetStory()">STOP</button>`; // B2a  B2b
     
     // B1 END
     }  else if (choice === 'samepath' || choice === 'diffpath') {
