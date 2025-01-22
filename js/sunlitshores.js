@@ -1,3 +1,4 @@
+// Secrets of Sunlit Shores
 function makeChoice(choice) {
     const storyText = document.getElementById('story-text');
     const choices = document.getElementById('choices');
