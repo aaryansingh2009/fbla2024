@@ -5,7 +5,7 @@ function makeChoice(choice) {
     const headingblue = document.getElementById('headingblue');
 
     if (choice === 'begin') {
-        storyText.textContent = 'The Secrets of the Sunlit Shores; </strong> You find yourself on the sun-kissed sands of Sunlit Shores, a beach known for its crystal-clear waters and vibrant marine life. Palm trees sway gently in the breeze, and the salty air fills your lungs with invigorating energy. Locals whisper of hidden treasures and mystical sea creatures lurking beneath the waves. As you gaze out at the horizon, two intriguing options catch your eye:';
+        storyText.textContent = 'The Secrets of the Sunlit Shores: You find yourself on the sun-kissed sands of Sunlit Shores, a beach known for its crystal-clear waters and vibrant marine life. Palm trees sway gently in the breeze, and the salty air fills your lungs with invigorating energy. Locals whisper of hidden treasures and mystical sea creatures lurking beneath the waves. As you gaze out at the horizon, two intriguing options catch your eye:';
         headingblue.textContent = 'Discover the secrets of the Sunlit Shores, and hidden treasures through the beach.';
         choices.innerHTML = `
             <button onclick="makeChoice('hiddenpools')">The Hidden Tide Pools</button>
