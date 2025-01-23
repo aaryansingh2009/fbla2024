@@ -113,7 +113,8 @@ function resetStory() {
     const choices = document.getElementById('choices');
     const headingblue = document.getElementById('headingblue');
 
-    storyText.textContent = '<ol class="list-group list-group-numbered"><li class="list-group-item">You will be given a scenerio and read thoroughly</li><li class="list-group-item">There will be 2 choices each taking you to a different path </li><li class="list-group-item">Choose one of the choices</li><li class="list-group-item">Feel free to stop by clicking the <strong>STOP</strong> button</li></ol>';
+    storyText.innerHTML = '• You will be given a scenerio and read thoroughly <br> • There will be 2 choices each taking you to a different path <br> • Choose one of the choices <br> • Feel free to stop by clicking the "STOP" button';
     headingblue.textContent = 'Instructions for the Interactive Story';
-    choices.innerHTML = `<button onclick="makeChoice('begin')">Click to Get Started</button>`;
+    choices.innerHTML = `
+                        <button onclick="makeChoice('begin')">Click to Get Started</button>`;
 }
