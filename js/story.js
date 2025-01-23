@@ -6,7 +6,7 @@ function makeChoice(choice) {
 
     // BEGIN THE ENCHANTED STORY SCENE
     if (choice === 'begin') {
-        storyText.textContent = 'Enchanted Forest Adventure </strong> You find yourself at the edge of an enchanted forest. The tall, ancient trees are adorned with luminescent flowers, their petals glowing in shades of blue and purple. A gentle breeze carries the scent of jasmine and a faint humming sound, like a distant melody. You feel a mixture of fear and excitement coursing through your veins.';
+        storyText.textContent = 'Enchanted Forest Adventure: You find yourself at the edge of an enchanted forest. The tall, ancient trees are adorned with luminescent flowers, their petals glowing in shades of blue and purple. A gentle breeze carries the scent of jasmine and a faint humming sound, like a distant melody. You feel a mixture of fear and excitement coursing through your veins.';
         headingblue.textContent = 'Discover the magic, mystery, and friendship within the enchanted woods.';
         choices.innerHTML = `<button onclick="makeChoice('enter')">Enter the forest</button>
                             <button onclick="makeChoice('turnbackhome')">Turn back and go Home</button>
@@ -109,19 +109,12 @@ function makeChoice(choice) {
     } 
 }
 function resetStory() {
-    // const storyText = document.getElementById('story-text');
+    const storyText = document.getElementById('story-text');
     const choices = document.getElementById('choices');
     const headingblue = document.getElementById('headingblue');
-    // storyText.textContent = '';
-    const items = ['You will be given a scenerio and read thoroughly', 'There will be 2 choices each taking you to a different path', 'Choose one of the choices', 'Feel free to stop by clicking the "STOP" button'];
-    const ul = document.getElementById('story-text');
 
-    items.forEach(item => {
-        const storyText = document.createElement('story-text'); // Create a list item
-        storyText.textContent = item; // Set the text content of the list item
-        ul.appendChild(storyText); // Append the list item to the unordered list
-    });
-
+    storyText.textContent = '• You will be given a scenerio and read thoroughly \n • There will be 2 choices each taking you to a different path \n • Choose one of the choices \n • Feel free to stop by clicking the "STOP" button \n';
     headingblue.textContent = 'Instructions for the Interactive Story';
-    choices.innerHTML = `<button onclick="makeChoice('begin')">Click to Get Started</button>`;
+    choices.innerHTML = `
+                        <button onclick="makeChoice('begin')">Click to Get Started</button>`;
 }
