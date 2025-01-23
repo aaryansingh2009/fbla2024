@@ -114,12 +114,12 @@ function resetStory() {
     const headingblue = document.getElementById('headingblue');
     // storyText.textContent = '';
     const items = ['You will be given a scenerio and read thoroughly', 'There will be 2 choices each taking you to a different path', 'Choose one of the choices', 'Feel free to stop by clicking the "STOP" button'];
-    const storyText = document.getElementById('story-text');
+    const ul = document.getElementById('story-text');
 
     items.forEach(item => {
-        const li = document.createElement('li'); // Create a list item
-        li.textContent = item; // Set the text content of the list item
-        storyText.appendChild(li); // Append the list item to the unordered list
+        const storyText = document.createElement('story-text'); // Create a list item
+        storyText.textContent = item; // Set the text content of the list item
+        ul.appendChild(storyText); // Append the list item to the unordered list
     });
 
     headingblue.textContent = 'Instructions for the Interactive Story';
