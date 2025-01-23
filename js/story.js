@@ -1,11 +1,18 @@
-// Enchanted Forest 
+// Enchanted Forest Story 
 function makeChoice(choice) {
     const storyText = document.getElementById('story-text');
     const choices = document.getElementById('choices');
+    const headingblue = document.getElementById('headingblue');
 
+    // BEGIN THE ENCHANTED STORY SCENE
+    if (choice === 'begin') {
+        storyText.textContent = 'Enchanted Forest Adventure </strong> You find yourself at the edge of an enchanted forest. The tall, ancient trees are adorned with luminescent flowers, their petals glowing in shades of blue and purple. A gentle breeze carries the scent of jasmine and a faint humming sound, like a distant melody. You feel a mixture of fear and excitement coursing through your veins.';
+        headingblue.textContent = 'Discover the magic, mystery, and friendship within the enchanted woods.';
+        choices.innerHTML = `<button onclick="makeChoice('enter')">Enter the forest</button>
+                            <button onclick="makeChoice('turnbackhome')">Turn back and go Home</button>
+                            <button onclick="resetStory()">STOP</button>`; // entering the forest  and  turn back and go home
     // ENTERING THE FOREST
-
-    if (choice === 'enter') {
+    } else if (choice === 'enter') {
         storyText.textContent = 'As you step into the forest, the sound grows louder-a harmonious tune mixed with the rustling leaves. Sunlight filters through the canopy, creating a kaleidoscope of light on the forest floor. You spot a peculiar tree with a door carved into its trunk.';
         choices.innerHTML = `<button onclick="makeChoice('investigate')">Investigate the sound</button>
                             <button onclick="makeChoice('explore')">Explore the tree</button>
