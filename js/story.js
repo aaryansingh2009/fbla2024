@@ -109,10 +109,19 @@ function makeChoice(choice) {
     } 
 }
 function resetStory() {
-    const storyText = document.getElementById('story-text');
+    // const storyText = document.getElementById('story-text');
     const choices = document.getElementById('choices');
-    storyText.textContent = 'Enchanted Forest Adventures;You find yourself at the edge of an enchanted forest. The tall, ancient trees are adorned with luminescent flowers, their petals glowing in shades of blue and purple. A gentle breeze carries the scent of jasmine and a faint humming sound, like a distant melody. You feel a mixture of fear and excitement coursing through your veins.';
-    choices.innerHTML = `
-        <button onclick="makeChoice('enter')">Enter the forest</button>
-        <button onclick="makeChoice('turnbackhome')">Turn back and go Home</button>`;
+    const headingblue = document.getElementById('headingblue');
+    // storyText.textContent = '';
+    const items = ['You will be given a scenerio and read thoroughly', 'There will be 2 choices each taking you to a different path', 'Choose one of the choices', 'Feel free to stop by clicking the "STOP" button'];
+    const storyText = document.getElementById('story-text');
+
+    items.forEach(item => {
+        const li = document.createElement('li'); // Create a list item
+        li.textContent = item; // Set the text content of the list item
+        storyText.appendChild(li); // Append the list item to the unordered list
+    });
+
+    headingblue.textContent = 'Instructions for the Interactive Story';
+    choices.innerHTML = `<button onclick="makeChoice('begin')">Click to Get Started</button>`;
 }
