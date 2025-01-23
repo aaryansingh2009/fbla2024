@@ -2,9 +2,18 @@
 function makeChoice(choice) {
     const storyText = document.getElementById('story-text');
     const choices = document.getElementById('choices');
+    const headingblue = document.getElementById('headingblue');
+
+    if (choice === 'begin') {
+        storyText.textContent = 'The Secrets of the Sunlit Shores; </strong> You find yourself on the sun-kissed sands of Sunlit Shores, a beach known for its crystal-clear waters and vibrant marine life. Palm trees sway gently in the breeze, and the salty air fills your lungs with invigorating energy. Locals whisper of hidden treasures and mystical sea creatures lurking beneath the waves. As you gaze out at the horizon, two intriguing options catch your eye:';
+        headingblue.textContent = 'Discover the secrets of the Sunlit Shores, and hidden treasures through the beach.';
+        choices.innerHTML = `
+            <button onclick="makeChoice('hiddenpools')">The Hidden Tide Pools</button>
+            <button onclick="makeChoice('abandoned')">The Abandoned Shipwreck</button>
+            <button onclick="resetStory()">STOP</button>`; // hidden pools and ship wreck
 
     // THE HIDDEN TIDE POOLS
-    if (choice === 'hiddenpools') {
+    } else if (choice === 'hiddenpools') {
         storyText.textContent = 'You make your way to the rocky outcrop, where the tide pools are filled with vibrant starfish, sea anemones, and tiny fish darting about. As you lean in closer, you notice a glimmering object at the bottom of one pool. \n Suddenly, a friendly sea turtle swims by and pops its head above the water. "Hello there! If you help me find my lost shell, I can show you something special!" it says.';
         choices.innerHTML = `
             <button onclick="makeChoice('agree')">Agree to help the turtle find its shell</button>
@@ -90,12 +99,15 @@ function makeChoice(choice) {
 
 }
 
+// STOP or RESTART button function
 function resetStory() {
     const storyText = document.getElementById('story-text');
     const choices = document.getElementById('choices');
-    storyText.textContent = 'The Secrets of the Sunlit Shores; You find yourself on the sun-kissed sands of Sunlit Shores, a picturesque beach known for its crystal-clear waters and vibrant marine life. Palm trees sway gently in the breeze, and the salty air fills your lungs with invigorating energy. Locals whisper of hidden treasures and mystical sea creatures lurking beneath the waves. \n As you gaze out at the horizon, two intriguing options catch your eye:';
+    const headingblue = document.getElementById('headingblue');
+
+    storyText.innerHTML = '• You will be given a scenerio and read thoroughly <br> • There will be 2 choices each taking you to a different path <br> • Choose one of the choices <br> • Feel free to stop by clicking the "STOP" button';
+    headingblue.textContent = 'Instructions for the Interactive Story';
     choices.innerHTML = `
-        <button onclick="makeChoice('hiddenpools')">The Hidden Tide Pools</button>
-        <button onclick="makeChoice('abandoned')">The Abandoned Shipwreck</button>
-    `;
+                        <button onclick="makeChoice('begin')">Click to Get Started</button>`;
 }
+
