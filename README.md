@@ -1,7 +1,7 @@
 # FBLA - Intro to Programming
 
 ## Description:
-Welcome to our FBLA - Intro to Programming website. This website is an interactive story which interacts with the user. There a stories which you can choose from and goes on based on what the user chooses on.
+Welcome to our FBLA - Intro to Programming website. This website is an interactive story which interacts with the user. There are stories which you can choose from and goes on based on what the user chooses on.
 
 ## Code Base:
 We used a variety of languages such as HTML, CSS, and JavaScript. The most common code is HTML which formats each page. With the help of Bootstrap, the page is formatted with minimal CSS involved unless the output isn't good, we used the Bootstrap CSS.
