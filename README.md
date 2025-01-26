@@ -4,7 +4,7 @@
 Welcome to our FBLA - Intro to Programming website. This website is an interactive story which interacts with the user. There are stories which you can choose from and goes on based on what the user chooses on.
 
 ## Code Base:
-We used a variety of languages such as HTML, CSS, and JavaScript. The most common code is HTML which formats each page. With the help of Bootstrap, the page is formatted with minimal CSS involved unless the output isn't good, we used the Bootstrap CSS.
+We used a variety of languages such as HTML, CSS, and JavaScript. The most common language is HTML which formats each page. With the help of Bootstrap CSS , the web page is formatted with minimal CSS. However, if the output isn't good, we overwrote the CSS.
 
 ## Contributing:
 We welcome any and all contributions! Here are some ways you can get started:
@@ -22,5 +22,9 @@ We welcome any and all contributions! Here are some ways you can get started:
 ## Contributers:
 1. Aayush Singh - Freshman at Franklin High School
 2. Aaryan Singh - Freshman at Franklin High School
+
+##
+
+FBLA 2025 - Intro to Programming
 
 
