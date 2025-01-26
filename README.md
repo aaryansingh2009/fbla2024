@@ -19,7 +19,7 @@ We welcome any and all contributions! Here are some ways you can get started:
 4. Choose one of the 2 choices each taking you to a different path
 5. Click stop to restart 
 
-## Acknowledgments:
+## Contributers:
 1. Aayush Singh - Freshman at Franklin High School
 2. Aaryan Singh - Freshman at Franklin High School
 
